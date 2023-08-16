@@ -8,3 +8,7 @@ rails v7.0.5
 ```
 $ rails s
 ```
+
+# Map
+
+https://github.com/taroooth/rails-playground/wiki/Map
