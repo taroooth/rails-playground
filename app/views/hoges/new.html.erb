@@ -1,0 +1,9 @@
+<%= form_with model: @hoge, url: hoges_path, data: { turbo: false } do |f| %>
+  <% max_image_size = 2 %>
+  <% aspect_width = 1 %>
+  <% aspect_height = 1 %>
+  <div data-controller='image-preview' data-image-preview-max-image-size-value="<%= max_image_size %>" data-image-preview-aspect-width-value="<%= aspect_width %>" data-image-preview-aspect-height-value="<%= aspect_height %>">
+    <%= f.file_field :image, accept: 'image/jpeg,image/png', data: { action: 'change->image-preview#preview', target: 'image-preview.image' } %>
+  </div>
+  <%= f.submit '保存' %>
+<% end %>
